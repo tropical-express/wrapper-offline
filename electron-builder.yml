@@ -1,0 +1,28 @@
+appId: com.tropicalexpress.wrapperoffline
+productName: Wrapper Offline
+executableName: wrapper-offline
+
+directories:
+  app: dist
+  output: release
+
+asar: false
+
+extraResources:
+  - from: resources
+    to: resources
+
+win:
+  target:
+    - target: portable
+      arch:
+        - x64
+  artifactName: Wrapper-Offline-${version}-Windows-${arch}.${ext}
+
+linux:
+  target:
+    - target: AppImage
+      arch:
+        - x64
+  category: Utility
+  artifactName: Wrapper-Offline-${version}-Linux-${arch}.${ext}
